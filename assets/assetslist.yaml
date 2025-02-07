@@ -3,5 +3,5 @@ fonts:
   - midfont : ["./assets/fonts/font.otf", 50]
   - smallfont : ["./assets/fonts/font.otf", 20]
 images:
-  - background : "./assets/images/bg.png"
+  - background : "./assets/images/bg.jpg"
 sounds:

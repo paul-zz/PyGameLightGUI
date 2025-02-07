@@ -1,2 +1,10 @@
 # PyGame LightGUI
-编写PyGame游戏时写的一些GUI控件。
+PyGame GUI elements with gaussian blur effects.
+
+## Current Progress
+### Elements
+- OptionBox
+- PushButton
+
+### Demo
+demo.py

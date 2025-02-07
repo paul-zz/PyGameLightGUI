@@ -1,0 +1,7 @@
+fonts:
+  - bigfont : ["./assets/fonts/font_bold.otf", 80]
+  - midfont : ["./assets/fonts/font.otf", 50]
+  - smallfont : ["./assets/fonts/font.otf", 20]
+images:
+  - background : "./assets/images/bg.png"
+sounds:

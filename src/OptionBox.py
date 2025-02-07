@@ -87,12 +87,8 @@ class OptionBox():
         self.menu_active = self.rect.collidepoint(mpos)
         
         self.active_option = -1
-        for i in range(len(self.option_list)):
-            rect = self.rect.copy()
-            rect.y += (i+1) * self.rect.height
-            if rect.collidepoint(mpos):
-                self.active_option = i
-                break
+        if self.outer_rect and self.outer_rect.collidepoint(mpos):
+            self.active_option = int((mpos[1] - self.outer_rect.y) / self.rect.height)
 
         if not self.menu_active and self.active_option == -1:
             self.draw_menu = False

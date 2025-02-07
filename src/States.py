@@ -51,7 +51,7 @@ class Homepage(State):
     0, 100, 300, 50, (255, 255, 255), (100, 200, 255), AssetsLoader.getFont("smallfont"), ['One', 'Two', 'Three', 'Four. Very Very Long Option Text'])
         
         self.gauge1 = Gauge(
-    0, 200, 600, 50, (255, 255, 255), (100, 200, 255), 50, 0, 100, True, AssetsLoader.getFont("smallfont"))
+    0, 400, 600, 50, (255, 255, 255), (100, 200, 255), 50, 0, 100, True, AssetsLoader.getFont("smallfont"))
 
         self.btn_ok = PushButton(
     0, 668, 512, 50, (255, 255, 255), (100, 200, 255), AssetsLoader.getFont("smallfont"), "Confirm")

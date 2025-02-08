@@ -40,8 +40,7 @@ class Gauge(UIElements):
                 msg = self.squeeze_to_width(msg)
         
         if self.enableBlur:
-            blur_bg_surf = pygame.transform.gaussian_blur(surf.subsurface(self.rect), self.blurRadius)
-            surf.blit(blur_bg_surf, self.rect)
+            self.draw_blur_layer(surf, self.rect)
 
         surf.blit(box_surf, self.rect)
 

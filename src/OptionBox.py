@@ -31,8 +31,7 @@ class OptionBox(UIElements):
             msg = self.squeeze_to_width(msg)
         
         if self.enableBlur:
-            blur_bg_surf = pygame.transform.gaussian_blur(surf.subsurface(self.rect), self.blurRadius)
-            surf.blit(blur_bg_surf, self.rect)
+            self.draw_blur_layer(surf, self.rect)
 
         surf.blit(box_surf, self.rect)
         pygame.draw.rect(surf, (0, 0, 0), self.rect, 2)
@@ -45,8 +44,7 @@ class OptionBox(UIElements):
             surf_outer_option.set_alpha(self.alpha)
 
             if self.enableBlur:
-                blur_outer_bg_surf = pygame.transform.gaussian_blur(surf.subsurface(self.outer_rect), self.blurRadius)
-                surf.blit(blur_outer_bg_surf, self.outer_rect)
+                self.draw_blur_layer(surf, self.outer_rect)
             
             rect_font = self.outer_rect.copy()
             rect_font.height = self.rect.height

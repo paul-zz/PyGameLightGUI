@@ -7,8 +7,8 @@ class UIElements():
 
         # Appearance
         self.enableBlur = True
-        self.blur_method = pygame.transform.box_blur
-        self.blurRadius = 20
+        self.blur_method = self.__triple_box_blur
+        self.blurRadius = 3
         self.alpha = 127
 
     def fit_to_width(self, surf, proportion = 0.85):
@@ -24,3 +24,9 @@ class UIElements():
     def draw_blur_layer(self, surf : pygame.Surface, rect : pygame.Rect):
         blur_bg_surf = self.blur_method(surf.subsurface(rect), self.blurRadius)
         surf.blit(blur_bg_surf, rect)
+
+    def __triple_box_blur(self, surf : pygame.Surface, radius : int):
+        surf_out = pygame.transform.box_blur(surf, radius)
+        surf_out = pygame.transform.box_blur(surf_out, radius)
+        surf_out = pygame.transform.box_blur(surf_out, radius)
+        return surf_out

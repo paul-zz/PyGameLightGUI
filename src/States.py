@@ -82,10 +82,10 @@ class Homepage(State):
         btn_switch_on = self.btn_switch.update(event)
         gauge_curr_val = self.gauge1.update(event)
 
-        if selected_option >=0:
-            # Set locale and refresh the titles
-            LocaleManager.setLocale(selected_option)
-            self.update(None)
+        # if selected_option >=0:
+        #     # Set locale and refresh the titles
+        #     LocaleManager.setLocale(selected_option)
+        #     self.update(None)
         if btn_ok_pressed:
             print("PRESSED ON CONFIRM BUTTON")
         if btn_cancel_pressed:
